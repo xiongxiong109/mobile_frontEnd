@@ -1,0 +1,268 @@
+.animated{}
+.animated.infinite{
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+.animated.fadeInUp{
+	opacity: 0; /*这里的css可以视作初始值,因为动画在结束后会保持结束状态的样子*/
+	-webkit-animation: fadeInUp 1s ease forwards;
+	animation: fadeInUp 1s ease forwards;
+}
+.animated.fadeInDown{
+	opacity: 0;
+	-webkit-animation: fadeInDown 1s ease forwards;
+	animation: fadeInDown 1s ease forwards;
+}
+.animated.fadeOutLeft{
+	opacity: 1;
+	-webkit-animation: fadeOutLeft 1s ease forwards;
+	animation: fadeOutLeft 1s ease forwards;
+}
+.animated.fadeInRight{
+	opacity: 0;
+	-webkit-animation: fadeInRight 1s ease forwards;
+	animation: fadeInRight 1s ease forwards;
+}
+.animated.fadeInLeft{
+	opacity: 0;
+	-webkit-animation: fadeInLeft 1s ease forwards;
+	animation: fadeInLeft 1s ease forwards;
+}
+.animated.bounceIn{
+	opacity: 1;
+	-webkit-animation: bounceIn 1s ease forwards;
+	animation: bounceIn 1s ease forwards;
+}
+.animated.fadeOutRight{
+	opacity: 1;
+	-webkit-animation: fadeOutRight 1s ease forwards;
+	animation: fadeOutRight 1s ease forwards;
+}
+.animated.zoomIn{
+	-webkit-transform:scale(0,0);
+	transform:scale(0,0);
+	opacity: 1;
+	-webkit-animation: zoomIn 1s ease-out forwards;
+	animation: zoomIn 1s ease-out forwards;
+}
+.animated.breath{
+	-webkit-transform:scale(1,1);
+	transform:scale(1,1);
+	-webkit-animation: breath 2s 0s ease-out infinite;
+	animation: breath 2s 0s ease-out infinite;
+}
+/*延迟动画*/
+.animated.d1{
+	-webkit-animation-delay:0.4s;
+	animation-delay: 0.4s;
+}
+.animated.d2{
+	-webkit-animation-delay:0.8s;
+	animation-delay: 0.8s;
+}
+.animated.d3{
+	-webkit-animation-delay:1.2s;
+	animation-delay: 1.2s;
+}
+.animated.d4{
+	-webkit-animation-delay:1.6s;
+	animation-delay: 1.6s;
+}
+
+/*fadeInUp*/
+@-webkit-keyframes fadeInUp{
+	from{
+		opacity: 0;
+		-webkit-transform: translateY(50px);
+	}
+	to{
+		opacity: 1;
+		-webkit-transform: translateY(0px);
+	}
+}
+@keyframes fadeInUp{
+	from{
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+/*fadeInDown*/
+@-webkit-keyframes fadeInDown{
+	
+	from{
+		opacity: 0;
+		-webkit-transform: translateY(-50px);
+	}
+	to{
+		opacity: 1;
+		-webkit-transform: translateY(0px);
+	}
+	
+}
+@keyframes fadeInDown{
+	from{
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+/*fadeOutLeft*/
+@-webkit-keyframes fadeOutLeft{
+	from{
+		opacity: 1;
+		-webkit-transform: translateX(0px);
+	}
+	to{
+		opacity: 0;
+		-webkit-transform: translateX(-100%);
+	}
+}
+@keyframes fadeOutLeft{
+	from{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+	to{
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+}
+
+/*fadeInRight*/
+@-webkit-keyframes fadeInRight{
+	from{
+		opacity: 0;
+		-webkit-transform:translateX(100%);
+	}
+	to{
+		opacity: 1;
+		-webkit-transform:translateX(0);
+	}
+}
+@keyframes fadeInRight{
+	from{
+		opacity: 0;
+		transform:translateX(100%);
+	}
+	to{
+		opacity: 1;
+		transform:translateX(0);
+	}
+}  
+/*fadeInLeft*/
+@-webkit-keyframes fadeInLeft{
+	from{
+		opacity: 0;
+		-webkit-transform:translateX(-100%);
+	}
+	to{
+		opacity: 1;
+		-webkit-transform:translateX(0);
+	}
+}
+@keyframes fadeInLeft{
+	from{
+		opacity: 0;
+		transform:translateX(-100%);
+	}
+	to{
+		opacity: 1;
+		transform:translateX(0);
+	}
+}
+
+/*bounceIn*/
+@-webkit-keyframes bounceIn{
+	0%,30%,60%{
+		-webkit-transform:scale(0.8,0.8);
+	}
+	20%,40%,50%{
+		-webkit-transform:scale(1.2,1.2);
+	}
+	100%{
+		-webkit-transform:scale(1,1);
+	}
+}
+@keyframes bounceIn{
+	0%,30%,60%{
+		transform:scale(0.8,0.8);
+	}
+	20%,40%,50%{
+		transform:scale(1.2,1.2);
+	}
+	100%{
+		transform:scale(1,1);
+	}
+}
+/*fadeOutRight*/
+@-webkit-keyframes fadeOutRight{
+	from{
+		opacity: 1;
+		-webkit-transkform:translateX(0px);
+	}
+	to{
+		opacity: 0;
+		-webkit-transform:translateX(100%);
+	}
+}
+@keyframes fadeOutRight{
+	from{
+		opacity: 1;
+		transkform:translateX(0px);
+	}
+	to{
+		opacity: 0;
+		transform:translateX(100%);
+	}
+}
+
+/*zoomIn*/
+@-webkit-keyframes zoomIn{
+	from{
+		-webkit-transform:scale(0,0);
+	}
+	to{
+		-webkit-transform:scale(1,1);
+	}
+}
+@keyframes zoomIn{
+	from{
+		transform:scale(0,0);
+	}
+	to{
+		transform:scale(1,1);
+	}
+}
+
+/*breath*/
+@-webkit-keyframes breath{
+	0%,100%{
+		-webkit-transform:scale(1,1);
+	}
+	33%{
+		-webkit-transform:scale(1.1,1.1);
+	}
+	66%{
+		-webkit-transform:scale(0.8,0.8);
+	}
+
+}
+@keyframes breath{
+	0%,100%{
+		transform:scale(1,1);
+	}
+	33%{
+		transform:scale(1.1,1.1);
+	}
+	66%{
+		transform:scale(0.8,0.8);
+	}
+}

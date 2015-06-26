@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="Keywords" content="移动端,设计方案"/>
+		<meta name="Description" content="移动端的整体解决方案,包括布局、动画、框架选择、页面加载优化等"/>
+		<meta http-equiv="Pragma" content="no-cache" />
+		<title>移动端整体设计解决方案</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css
+		"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		 <script type="text/javascript">
+		        var isMobilePlayer = 0;
+		        // 判断是否为移动端运行环境
+		        if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+		            if(window.location.href.indexOf("?mobile")<0){
+		                try{
+		                    if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)){
+		                        // 判断访问环境是 Android|webOS|iPhone|iPod|BlackBerry 则加载以下样式
+		                        isMobilePlayer = 1;
+		                        if( /MicroMessenger/i.test(navigator.userAgent) ){
+		                        	//处在微信环境下
+//		                        	alert('当前处在微信环境下');
+		                        }
+		                    }
+		                    else{
+		                        // 判断访问环境是 其他移动设备 则加载以下样式
+		                    }
+		                }
+		                catch(e){}
+		            }
+		        }
+		        else{
+		            // 如果以上都不是，则加载以下样式
+		        }    
+		        if( isMobilePlayer ){
+		        	
+		        }
+		    </script>
+	</head>
+	<body>
+		<!--loading start-->
+		<section class='page p-loading show'>
+			<div class="page-wrap">
+				<span class="version animated fadeInUp d2">v1.0.0</span>
+				<img src="img/logo.jpg" class="animated fadeInUp"/>
+				<h1 class="animated fadeInDown d1">移动端设计解决方案</h1>
+				<p class="author animated fadeInUp d3" id="endLoading">powered by 熊熊109</p>
+			</div>
+		</section>
+		<!--loading end-->
+		<!--main-->
+		<section class="page p-index">
+			<div class="page-wrap">
+				<h4 class="animated fadeInDown d1">Hello Html5, Hello Mobile Web</h4>
+				<ul class='list' id='indexList'>
+					<li class="animated fadeInRight d2">
+						<a href="javascript:;" data-link='layer'>1.移动端布局问题</a>
+					</li>
+					<li class="animated fadeInLeft d3">
+						<a href="javascript:;" data-link='animate'>2.动画问题</a>
+					</li>
+					<li class="animated fadeInRight d2">
+						<a href="javascript:;" data-link='load'>3.页面加载问题</a>
+					</li>
+					<li class="animated fadeInLeft d3">
+						<a href="javascript:;" data-link='source'>4.资源优化问题</a>
+					</li>
+					<li class="animated fadeInRight d2">
+						<a href="javascript:;" data-link='cache'>5.缓存问题</a>
+					</li>
+					<li class="animated fadeInLeft d3">
+						<a href="javascript:;" data-link='event'>6.事件优化问题</a>
+					</li>
+					<li class="animated fadeInDown d4" id="plus">
+						<a href="javascript:;" data-link='plus'>7.html5+ api</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="page p-layer">
+			<div class="page-wrap">
+				<h4 class="animated fadeInDown">关于移动端的基础布局</h4>
+				<div class="content animated fadeInDown d1">
+					<p>可以考虑使用<em>移动优先</em>的响应式布局。</p>
+					<p>对浏览器环境进行判断,就移动端而言，不应该再是判断5大浏览器厂商，而是要判断是否为移动端运行环境</p>
+					<p>如果仅仅是针对微信浏览器，那么还要判断微信环境。</p>
+				</div>
+				<div class="content animated fadeInDown d2">
+					<p>微信或其他手机端的浏览器存在比较严重的缓存问题</p>
+					<p>比较官方的解决办法是增加一些meta cache的标签</p>
+					<img src="img/cache.png" alt="" />
+					<p>然而实验证明,这些标签在微信浏览器中并没有什么卵用</p>
+					<p>相对而言比较有用的方法是,给引入的css、js文件添加一个时间戳</p>
+					<p>如&lt;link href='style.css<em>?20150625</em>'&gt;</p>
+				</div>
+				<div class="content animated fadeInDown d3">
+					<p>为了能让内容在整个屏幕中居中，应该给每个page设置一定的安全边界padding。尽量将元素挤到正中间。</p>
+				</div>
+				<div class="content animated fadeInUp d4">
+					<p>对于单页面的应用,每一个模块都可以用一个section来盛装,然后利用CSS和JS,来让每一个处于激活状态的section出现在可视区,而其他的非激活模块都隐藏起来</p>
+					<p>对于单页面应用而言,每个section当然是使用绝对定位最为方便,但是绝对定位以后会导致section里面的子元素的绝对定位找不到父元素</p>
+					<p>所以在这种布局之下，最好给每个绝对定位的section加上一个撑满整个section 的相对父级,好用于控制子元素的绝对定位</p>
+				</div>
+				<button class="back-btn animated fadeInDown d5">返回</button>
+			</div>
+		</section>
+		<section class="page p-animate">
+			<div class="page-wrap">
+				<h4 class='animated fadeInLeft'>移动端的动画问题</h4>
+				<div class="content animated fadeInLeft">
+					<p>移动端的动画提倡使用CSS3来完成</p>
+					<p>CSS3动画存在兼容性问题，但是在移动端,尤其是在微信浏览器内,我们可以只做webkit内核的处理</p>
+					<p>即,可以只写-webkit-transform,transform; -webkit-animation,animation</p>
+					<p>animation默认是同时播放的,我们可以利用animation-delay来控制不同元素的延迟播放</p>
+					<p>同时,对动画的控制也可以使用js来完成,用js监听animationEnd,webkitAnimationEnd事件和transformEnd、webkitTransformEnd事件</p>
+				</div>
+				<div class="content animated fadeInDown d3">
+					<p>特别地,对于单页面应用而言,我们希望的是每次在页面加载进来的时候都能进行动画的播放,并且ainmation播放完后的状态一般都是forwards</p>
+					<p>要做到这一点有很多方法,比较简洁的一种方法,就是利用-webkit-animation-play-state 、animation-play-state</p>
+					<p>因为在PC端的时候，我们经常给一组元素的某一个元素添加active,那么我们可以设置这一组元素的动画播放状态-webkit-animation-play-state:paused</p>
+					<p>然后给active状态的那个元素添加-webkit-animation-play-state:running</p>
+				</div>
+				<button class="back-btn animated bounceIn">返回</button>
+			</div>
+		</section>
+		<section class="page p-load">
+			<h4 class="animated fadeInDown">移动端页面的加载问题</h4>
+			<div class="content animated fadeInLeft">
+				<p class="animated fadeInRight d2">在移动端，由于手机设备的性能与PC端差别太大,页面在加载时往往会出现卡顿现象</p>
+				<p class="animated fadeInRight d3">腾讯的<em>alloly team</em>给出的移动端规范建议是:</p>
+				<p class="animated fadeInRight d4">页面在最初加载时最多的http请求数不要超过<em>4</em>个</p>
+			</div>
+			<div class="content animated zoomIn d2">
+				<p>要实现这种加载的方法，就必须对前端的文件进行优化</p>
+				<p>1.只加载主要的js,main.js,其他的js在需要的时候再动态加载</p>
+				<p>js文件也可以通过添加async来实现异步</p>
+				<p>2.或者将js文件进行合并</p>
+				<p>3.针对CSS文件的操作也一样</p>
+				<p>上线的时候这些链接文件可以写到一个页面中，也可以先压缩</p>
+				<p></p>
+			</div>
+			<button class="back-btn animated fadeInDown d3">返回</button>
+		</section>
+		<!--main end-->
+		
+	</body>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+</html>
