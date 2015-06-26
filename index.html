@@ -87,14 +87,6 @@
 					<p>对浏览器环境进行判断,就移动端而言，不应该再是判断5大浏览器厂商，而是要判断是否为移动端运行环境</p>
 					<p>如果仅仅是针对微信浏览器，那么还要判断微信环境。</p>
 				</div>
-				<div class="content animated fadeInDown d2">
-					<p>微信或其他手机端的浏览器存在比较严重的缓存问题</p>
-					<p>比较官方的解决办法是增加一些meta cache的标签</p>
-					<img src="img/cache.png" alt="" />
-					<p>然而实验证明,这些标签在微信浏览器中并没有什么卵用</p>
-					<p>相对而言比较有用的方法是,给引入的css、js文件添加一个时间戳</p>
-					<p>如&lt;link href='style.css<em>?20150625</em>'&gt;</p>
-				</div>
 				<div class="content animated fadeInDown d3">
 					<p>为了能让内容在整个屏幕中居中，应该给每个page设置一定的安全边界padding。尽量将元素挤到正中间。</p>
 				</div>
@@ -142,6 +134,18 @@
 				<p></p>
 			</div>
 			<button class="back-btn animated fadeInDown d3">返回</button>
+		</section>
+		<section class="page p-source">
+			<div class="page-wrap">
+				<h4 class="animated fadeInDown">资源问题</h4>
+				<div class="content animated fadeInLeft">
+					<p>由于移动端的流量很奢侈,所以对于一些需要加载的静态资源必须做一些优化处理</p>
+					<p>移动端页面的设计图原稿宽一般为640px,适配手机屏幕320px,图片的精度一般也是原图是显示的2倍</p>
+					<p>为了减少http请求数,对于小的图标,我们推荐使用雪碧图、SVG、canvas和字体图标</p>
+					<p>音频和视频也要经过一定的压缩后再拿来使用</p>
+				</div>
+				<div class="back-btn">返回</div>
+			</div>
 		</section>
 		<!--main end-->
 		
