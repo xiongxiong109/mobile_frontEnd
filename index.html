@@ -41,7 +41,7 @@
 	</head>
 	<body>
 		<!--loading start-->
-		<section class='page p-loading show'>
+		<section class='page p-loading'>
 			<div class="page-wrap">
 				<span class="version animated fadeInUp d2">v1.0.0</span>
 				<img src="img/logo.jpg" class="animated fadeInUp"/>
@@ -145,6 +145,39 @@
 					<p>音频和视频也要经过一定的压缩后再拿来使用</p>
 				</div>
 				<div class="back-btn">返回</div>
+			</div>
+		</section>
+		<section class="page p-cache show">
+			<div class="page-wrap">
+				<h4 class="animated zoomFadeIn">缓存问题</h4>
+				<div class="content animated zoomFadeIn d1">
+					<p>为了减少网页的加载时间,浏览器都有一些缓存机制</p>
+					<p>在移动端由于种种限制，这种缓存机制尤为明显</p>
+					<p>缓存有利有弊,有利的自然是能够<em>迅速二次加载网页</em>,在利用html5的本地存储和离线应用的情况下，甚至还可以离线访问，做到和app类似的效果</p>
+					<p>但它的弊端在于，本地的存储和缓存会占用一定的手机空间</p>
+					<p>对于开发者而言，如果不做一些处理的话，很有可能你的网页在更新之后的很长一段缓存期内，用户并<em>不能及时地</em>看到更新后的效果</p>
+				</div>
+				<div class="content animated zoomFadeIn d2">
+					<p>这种缓存问题在做<em>微信网页开发</em>的时候,最容易碰到。</p>
+					<p>处理缓存问题的方法有很多种</p>
+					<ul>
+						<li>手动清理一下微信的存储空间</li>
+						<li>
+							<p>在页面内添加一些meta标签</p>
+							<img src="img/cache.png" alt="">
+							<p>然而事实证明,这样的做法看上去很叼，但是并没有什么<em>卵用</em></p>
+						</li>
+					</ul>
+				</div>
+				<div class="content animated zoomFadeIn d3">
+					<p>比较实用的土方法,是在页面所引用的静态资源的后面跟上一个时间戳或者随机数</p>
+					<p>例如:</p>
+					<p class="code">
+						&lt;link rel=<span class="gramma">"stylesheet"</span> type=<span class="gramma">"text/css"</span> href=<span class="gramma">"css/style.css
+		<em>?t=145236521</em>"</span>/&gt;
+	</p>
+				</div>
+				<div class="back-btn animated zoomFadeIn d4">返回</div>
 			</div>
 		</section>
 		<!--main end-->
