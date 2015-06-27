@@ -125,6 +125,13 @@ ul.list li a:after{
 	line-height: 1.5em;
 	color: #555;
 }
+p.code{
+	background-color: #000;
+	color:#9696FF;
+}
+p.code .gramma{
+	color: #dd0;
+}
 .content img{
 	width: 100%;
 	display: block;
