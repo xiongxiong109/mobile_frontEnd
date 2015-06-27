@@ -45,6 +45,14 @@
 	-webkit-animation: zoomIn 1s ease-out forwards;
 	animation: zoomIn 1s ease-out forwards;
 }
+.animated.zoomFadeIn{
+	-webkit-transform:scale(2,2);
+	transform:scale(2,2);
+	opacity: 0;
+	-webkit-animation: zoomFadeIn 1s ease-in forwards;
+	-o-animation: zoomFadeIn 1s ease-in forwards;
+	animation: zoomFadeIn 1s ease-in forwards;
+}
 .animated.breath{
 	-webkit-transform:scale(1,1);
 	transform:scale(1,1);
@@ -264,5 +272,27 @@
 	}
 	66%{
 		transform:scale(0.8,0.8);
+	}
+}
+
+/*zoomFadeIn*/
+@-webkit-keyframes zoomFadeIn{
+	from{
+		-webkit-transform:scale(2,2);
+		opacity: 0;
+	}
+	to{
+		-webkit-transform:scale(1,1);
+		opacity: 1;
+	}
+}
+@keyframes zoomFadeIn{
+	from{
+		transform:scale(14,14);
+		opacity: 0;
+	}
+	to{
+		transform:scale(1,1);
+		opacity: 1;
 	}
 }
