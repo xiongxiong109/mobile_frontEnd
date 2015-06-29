@@ -56,8 +56,13 @@
 .animated.breath{
 	-webkit-transform:scale(1,1);
 	transform:scale(1,1);
-	-webkit-animation: breath 2s 0s ease-out infinite;
-	animation: breath 2s 0s ease-out infinite;
+	-webkit-animation: breath 2s 0s linear infinite;
+	animation: breath 2s 0s linear infinite;
+}
+.animated.fly{
+	-webkit-animation: fly 2s linear infinite alternate;
+	-o-animation: fly 2s linear infinite alternate;
+	animation: fly 2s linear infinite alternate;
 }
 /*延迟动画*/
 .animated.d1{
@@ -256,7 +261,7 @@
 		-webkit-transform:scale(1,1);
 	}
 	33%{
-		-webkit-transform:scale(1.1,1.1);
+		-webkit-transform:scale(1.2,1.2);
 	}
 	66%{
 		-webkit-transform:scale(0.8,0.8);
@@ -268,7 +273,7 @@
 		transform:scale(1,1);
 	}
 	33%{
-		transform:scale(1.1,1.1);
+		transform:scale(1.2,1.2);
 	}
 	66%{
 		transform:scale(0.8,0.8);
@@ -294,5 +299,35 @@
 	to{
 		transform:scale(1,1);
 		opacity: 1;
+	}
+}
+
+/*fly*/
+@-webkit-keyframes fly{
+	0%{
+		-webkit-transform:translateY(0px);
+	}
+	33%{
+		-webkit-transform:translateY(-10px);
+	}
+	66%{
+		-webkit-transform:translateY(10px);
+	}
+	100%{
+		-webkit-transform:translateY(0px);
+	}
+}
+@keyframes fly{
+	0%{
+		transform:translateY(0px);
+	}
+	33%{
+		transform:translateY(-10px);
+	}
+	66%{
+		transform:translateY(10px);
+	}
+	100%{
+		transform:translateY(0px);
 	}
 }
