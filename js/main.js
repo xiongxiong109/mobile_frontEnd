@@ -32,7 +32,12 @@ var oPlus=document.getElementById('plus');
 		removeClass(oPlus,'fadeInDown');
 		addClass(oPlus,'breath');
 	});
-
+//html5
+var oHtml=document.getElementById('html5');
+	animationEnd(oHtml,function(){
+		removeClass(oHtml,'fadeInDown');
+		addClass(oHtml,'fly');
+	});
 //绑定动画监听事件
 function animationEnd(obj,fn){
 	if( obj.addEventListener ){
