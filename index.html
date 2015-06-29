@@ -41,7 +41,7 @@
 	</head>
 	<body>
 		<!--loading start-->
-		<section class='page p-loading'>
+		<section class='page p-loading show'>
 			<div class="page-wrap">
 				<span class="version animated fadeInUp d2">v1.0.0</span>
 				<img src="img/logo.jpg" class="animated fadeInUp"/>
@@ -147,7 +147,7 @@
 				<div class="back-btn">返回</div>
 			</div>
 		</section>
-		<section class="page p-cache show">
+		<section class="page p-cache">
 			<div class="page-wrap">
 				<h4 class="animated zoomFadeIn">缓存问题</h4>
 				<div class="content animated zoomFadeIn d1">
@@ -174,10 +174,29 @@
 					<p>例如:</p>
 					<p class="code">
 						&lt;link rel=<span class="gramma">"stylesheet"</span> type=<span class="gramma">"text/css"</span> href=<span class="gramma">"css/style.css
-		<em>?t=145236521</em>"</span>/&gt;
-	</p>
+					<em>?t=145236521</em>"</span>/&gt;
+					</p>
 				</div>
 				<div class="back-btn animated zoomFadeIn d4">返回</div>
+			</div>
+		</section>
+		<section class="page p-event">
+			<div class="page-wrap">
+				<h4 class="animated fadeInDown">事件优化问题</h4>
+				<div class="content animated fadeInLeft">
+					<p>移动端的js事件驱动与PC端有点不同</p>
+					<p>在PC端，绝大多数事件是鼠标点击事件</p>
+					<p>在移动端则应该优先考虑触屏事件</p>
+					<p>对于js库而言，在移动端使用将zepto更优于jquery</p>
+					<p>但是要注意的是,<em>zeptojs的很多模块要自己下载</em>,并且在真机上，zepto的swipe事件并没有什么卵用,还得手动取消touchmove的监听事件,才能起作用</p>
+				</div>
+				<div class="back-btn animated fadeInRight">返回</div>
+			</div>
+		</section>
+		<section class="page p-plus">
+			<div class="page-wrap">
+				<img src="img/html5.jpg" alt="" class="html5 animated fadeInDown" id='html5'>
+				<div class="back-btn animated fadeInRight">返回</div>
 			</div>
 		</section>
 		<!--main end-->
